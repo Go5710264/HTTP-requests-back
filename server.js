@@ -92,7 +92,7 @@ app.use((ctx, next) => {
     subscriptions = subscriptions.filter(sub => sub.phone !== phone);
     // удалить  подписку
     
-    ctx.response.body = 'OK';
+    ctx.response.body = 'OK. Уou have unsubscribed from the sms mailing list';
 
     next();
 })
@@ -122,7 +122,7 @@ app.use((ctx, next) => {
     subscriptions.push({ name, phone });
     // добавить подписку
     
-    ctx.response.body = 'OK';
+    ctx.response.body = 'OK. You have added your phone number for sending sms';
 
     next();
 })
